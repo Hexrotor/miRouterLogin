@@ -24,7 +24,7 @@ var Encrypt = {
     },
     nonceCreat: function () {
         var type = 0;
-        var deviceId = '96:16:3d:3c:3b:5b';// different devices may have different value
+        var deviceId = '12:3c:9e:58:67:4d';// this is your client's MAC, not the router's.
         var time = Math.floor(new Date().getTime() / 1000);
         var random = Math.floor(Math.random() * 10000);
         return [type, deviceId, time, random].join('_');
