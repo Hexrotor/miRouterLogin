@@ -13,10 +13,9 @@ def get_js(): # 导入js文件
     f.close()
     return htmlstr
 
-print("Please enter the router ip:")
-ip = input()
-print("Please enter password: ")
-passwd = input()
+ip = input("Please enter the router ip:")
+passwd = input("Please enter password: ")
+
 jsstr = get_js()
 ctx = execjs.compile(jsstr)
 utf = ctx.call("tokenGen", passwd) #js脚本执行后获得密钥和对应的nonce保存到utf
